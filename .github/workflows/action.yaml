@@ -19,4 +19,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: lint files
-        run: eslint --ext .jsx --fix src
+        run: pnpm eslint --ext .jsx --fix src
+
+      - name: run tests
+        run: pnpm vitest run
