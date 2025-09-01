@@ -4,5 +4,7 @@ on:
     types: [opened]
 jobs:
   output:
-    - name: echo Issue
-      run: echo "New Issue Open:" ${{ github.event.issue }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo Issue
+        run: echo "New Issue #${{ github.event.issue.number }}: ${{ github.event.issue.title }}"
