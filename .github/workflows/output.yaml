@@ -1,0 +1,8 @@
+name: Trigger on Issue event
+on:
+  issues:
+    types: [opened]
+jobs:
+  output:
+    - name: echo Issue
+      run: echo "New Issue Open:" ${{ github.event.issue }}
